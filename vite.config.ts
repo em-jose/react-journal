@@ -8,6 +8,8 @@ export default defineConfig({
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
+            "@journal": path.resolve(__dirname, "./src/journal"),
+            "@auth": path.resolve(__dirname, "./src/auth"),
         },
     },
 });

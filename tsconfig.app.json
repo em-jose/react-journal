@@ -23,7 +23,9 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@journal/*": ["./src/journal/*"],
+            "@auth/*": ["./src/auth/*"],
         }
     },
     "include": ["src"]
