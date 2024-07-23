@@ -14,7 +14,7 @@ export const CheckingAuth = () => {
                 padding: 4,
             }}
         >
-            <Grid item justifyContent="center">
+            <Grid container justifyContent="center" direction="row">
                 <CircularProgress color="warning" />
             </Grid>
         </Grid>
