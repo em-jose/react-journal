@@ -5,10 +5,16 @@ import { Grid, Typography, Button, TextField } from "@mui/material";
 import { ImageGallery } from "@journal/components/ImageGallery";
 import { useForm } from "@/hooks/useForm";
 import { setActiveNote, startSavingNote } from "@/store/journal";
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.css";
 
 export const NoteView = () => {
     const dispatch = useDispatch();
-    const { active: note } = useSelector((state) => state.journal);
+    const {
+        active: note,
+        messageSaved,
+        isSaving,
+    } = useSelector((state) => state.journal);
     const { body, title, date, onInputChange, formState } = useForm(note);
     const dateString = useMemo(() => {
         const newDate = new Date(date);
@@ -23,6 +29,12 @@ export const NoteView = () => {
     const onSaveNote = () => {
         dispatch(startSavingNote());
     };
+
+    useEffect(() => {
+        if (messageSaved.length > 0) {
+            Swal.fire("Note updated", messageSaved, "success");
+        }
+    }, [messageSaved]);
 
     return (
         <Grid
@@ -39,7 +51,12 @@ export const NoteView = () => {
                 </Typography>
             </Grid>
             <Grid item>
-                <Button color="primary" sx={{ p: 2 }} onClick={onSaveNote}>
+                <Button
+                    color="primary"
+                    sx={{ p: 2 }}
+                    onClick={onSaveNote}
+                    disabled={isSaving}
+                >
                     <SaveOutlined sx={{ fontSize: 30, mr: 1 }} />
                     Save
                 </Button>
