@@ -24,6 +24,9 @@ export const journalSlice = createSlice({
             state.isSaving = true;
             state.messageSaved = "";
         },
+        savingNewNote: (state) => {
+            state.isSaving = true;
+        },
         updateNote: (state, action) => {
             state.isSaving = false;
             state.notes = state.notes.map((note) => {
@@ -33,9 +36,6 @@ export const journalSlice = createSlice({
             });
 
             state.messageSaved = `${action.payload.title}, succesfully updated`;
-        },
-        savingNewNote: (state) => {
-            state.isSaving = true;
         },
         setPhotosToActiveNote: (state, action) => {
             state.active.imageUrls = [
