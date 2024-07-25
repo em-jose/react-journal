@@ -11,7 +11,7 @@ export const authenticatedState = {
     status: "authenticated",
     uid: "123ABC",
     email: "demo@test.com",
-    displayName: "demo@google.com",
+    displayName: "Demo User",
     photoURL: "https://demo.jpg",
     errorMessage: null,
 };
