@@ -1,10 +1,25 @@
-import { useSelector } from "react-redux";
-import { Box, Drawer, Toolbar, Typography, Divider, List } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    Box,
+    Drawer,
+    Toolbar,
+    Typography,
+    Divider,
+    List,
+    IconButton,
+} from "@mui/material";
+import { Close } from "@mui/icons-material";
 import { SideBarItem } from "@/journal/components";
+import { closeSidebar } from "@/store/ui";
 
 export const Sidebar = ({ drawerWidth }: Sidebar) => {
+    const dispatch = useDispatch();
     const { displayName } = useSelector((state) => state.auth);
     const { notes } = useSelector((state) => state.journal);
+
+    const onCloseSidebar = () => {
+        dispatch(closeSidebar());
+    };
 
     return (
         <Box
@@ -26,6 +41,15 @@ export const Sidebar = ({ drawerWidth }: Sidebar) => {
                     <Typography variant="h6" noWrap component="div">
                         {displayName}
                     </Typography>
+
+                    <IconButton
+                        color="inherit"
+                        edge="start"
+                        sx={{ ml: "auto" }}
+                        onClick={onCloseSidebar}
+                    >
+                        <Close />
+                    </IconButton>
                 </Toolbar>
                 <Divider />
                 <List>

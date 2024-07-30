@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import { Box, Toolbar } from "@mui/material";
 import { Navbar, Sidebar } from "@journal/components/";
 
-const DRAWER_WIDTH: number = 240;
-
 export const JournalLayout: React.FC<Props> = ({ children }) => {
+    const { showSidebar } = useSelector((state) => state.ui);
+    const DRAWER_WIDTH: number = showSidebar ? 240 : 0;
+
     return (
         <Box
             sx={{ display: "flex" }}
