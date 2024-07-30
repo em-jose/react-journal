@@ -29,7 +29,7 @@ pnpm install
 
 ### 2. Create .env files
 
-* Create the ".env" file with the following Firebase variables:
+* Create the ".env" file with the following Firebase and Cloudinary variables:
 
 ```txt
 VITE_FIREBASE_API_KEY
@@ -38,6 +38,7 @@ VITE_FIREBASE_PROJECT_ID
 VITE_FIREBASE_STORAGE_BUCKET
 VITE_FIREBASE_MESSAGE_IN_SENDER_ID
 VITE_FIREBASE_APP_ID
+VITE_CLOUDINARY_CLOUD_URL
 ```
 
 * To run the tests it is necessary to create the ".env.test" file and add the following Firebase and Cloudinary variables:
@@ -49,6 +50,7 @@ VITE_FIREBASE_PROJECT_ID
 VITE_FIREBASE_STORAGE_BUCKET
 VITE_FIREBASE_MESSAGE_IN_SENDER_ID
 VITE_FIREBASE_APP_ID
+VITE_CLOUDINARY_CLOUD_URL
 VITE_CLOUDINARY_CLOUD_NAME
 VITE_CLOUDINARY_API_KEY
 VITE_CLOUDINARY_API_SECRET
