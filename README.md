@@ -64,6 +64,6 @@ pnpm run dev
 
 | Command          | Action                                        |
 | :--------------- | :-------------------------------------------- |
-| `dev`            | Run the local development server  `localhost:4321`.  |
+| `dev`            | Run the local development server.  |
 | `build`          | Check for possible errors and build production packaging in `./dist/`.      |
-| `tests`          | Launch tests |
+| `tests`          | Launch tests. |
