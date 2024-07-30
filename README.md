@@ -2,11 +2,11 @@
 
 ## Overview
 
-Journal app created with React, Redux and Typescript usando using [Firebase](https://firebase.google.com/) as database and [Cloudinary](https://cloudinary.com/) as server to store the images.
+Journal app created with React, Redux and Typescript using [Firebase](https://firebase.google.com/) as database and [Cloudinary](https://cloudinary.com/) as server to store the images.
 
 The app allows multiple users to register and log in. Each user can create multiple notes as a diary and also add images to each note.
 
-## Tecnologías utilizadas
+## Tech stack
 
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
