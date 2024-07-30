@@ -4,7 +4,7 @@
 
 Journal app created with React, Redux and Typescript using [Firebase](https://firebase.google.com/) as database and [Cloudinary](https://cloudinary.com/) as server to store the images.
 
-The app allows multiple users to register and log in. Each user can create multiple notes as a diary and also add images to each note.
+The app allows multiple users to register and log in (even using your Google account). Each user can create multiple notes as a diary and also add images to each note.
 
 ## Tech stack
 
