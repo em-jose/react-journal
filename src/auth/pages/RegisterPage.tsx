@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Alert, Button, Grid, TextField, Typography } from "@mui/material";
 import { AuthLayout } from "@/auth/layout/AuthLayout";
 import { useForm } from "@/hooks";
-import { startCreatingWithEmailPassword } from "@/store/auth";
+import { startCreatingWithEmailPassword, AuthStatus } from "@/store/auth";
 
 const formData = {
     email: "",
@@ -26,7 +26,7 @@ export const RegisterPage = () => {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const { status, errorMessage } = useSelector((state) => state.auth);
     const isCheckingAuthentication = useMemo(
-        () => status === "checking",
+        () => status === AuthStatus.CHECKING,
         [status]
     );
     const {
