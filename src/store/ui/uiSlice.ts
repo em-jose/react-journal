@@ -9,7 +9,13 @@ export const uiSlice = createSlice({
         toggleSidebar: (state, action) => {
             state.showSidebar = action.payload;
         },
+        openSidebar: (state) => {
+            state.showSidebar = true;
+        },
+        closeSidebar: (state) => {
+            state.showSidebar = false;
+        },
     },
 });
 
-export const { toggleSidebar } = uiSlice.actions;
+export const { toggleSidebar, openSidebar, closeSidebar } = uiSlice.actions;
