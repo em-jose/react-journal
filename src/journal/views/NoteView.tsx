@@ -77,6 +77,7 @@ export const NoteView = () => {
                     onChange={onFileInputChange}
                     style={{ display: "none" }}
                     ref={fileInputRef}
+                    accept="image/png, image/jpeg"
                 />
 
                 <IconButton
