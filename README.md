@@ -68,4 +68,4 @@ pnpm run dev
 | :--------------- | :-------------------------------------------- |
 | `dev`            | Run the local development server.  |
 | `build`          | Check for possible errors and build production packaging in `./dist/`.      |
-| `tests`          | Launch tests. |
+| `test`           | Launch tests. |
